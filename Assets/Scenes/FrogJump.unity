@@ -286,6 +286,7 @@ MonoBehaviour:
   jumpPower: 0
   timeHeld: 0
   jumpSpeed: 0
+  hasJumped: 0
   score: 0
 --- !u!1 &354931929
 GameObject:
@@ -1455,7 +1456,7 @@ GameObject:
   - component: {fileID: 1116285504}
   - component: {fileID: 1116285506}
   - component: {fileID: 1116285505}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 9-Sliced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
