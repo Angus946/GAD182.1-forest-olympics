@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 15238146}
   - component: {fileID: 15238147}
   - component: {fileID: 15238148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tunnelFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 15238145}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.99, y: -5.75, z: 52.518375}
+  m_LocalPosition: {x: -0.99, y: -5.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -239,7 +239,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.8358865, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
@@ -250,7 +250,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 18.093884, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &30036076
 GameObject:
@@ -644,7 +644,9 @@ GameObject:
   m_Component:
   - component: {fileID: 542804516}
   - component: {fileID: 542804515}
-  - component: {fileID: 542804517}
+  - component: {fileID: 542804518}
+  - component: {fileID: 542804519}
+  - component: {fileID: 542804520}
   m_Layer: 0
   m_Name: bunny1
   m_TagString: Untagged
@@ -713,13 +715,40 @@ Transform:
   m_GameObject: {fileID: 542804514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0.93, z: 0}
+  m_LocalPosition: {x: -8, y: 1.06, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &542804517
+--- !u!50 &542804518
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542804514}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!58 &542804519
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -751,9 +780,21 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.125}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.125
+--- !u!114 &542804520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542804514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c822152aba034a43960c37d23a01f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731576605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1068,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1936,8 +1977,8 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 22
     m_Data: {fileID: 21300002, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300142, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300012, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 6
@@ -1960,8 +2001,8 @@ Tilemap:
     m_Data: {fileID: 21300052, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300092, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300142, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 89
     m_Data:
@@ -2019,7 +2060,7 @@ GameObject:
   - component: {fileID: 1377167606}
   - component: {fileID: 1377167607}
   - component: {fileID: 1377167608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2035,7 +2076,7 @@ Transform:
   m_GameObject: {fileID: 1377167605}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 1.37, z: 52.51837}
+  m_LocalPosition: {x: -0.92, y: 1.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2125,7 +2166,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.78659487, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
@@ -2136,7 +2177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 17.9953, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1490161436
 GameObject:
@@ -2865,7 +2906,7 @@ GameObject:
   - component: {fileID: 1872474074}
   - component: {fileID: 1872474075}
   - component: {fileID: 1872474076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2881,7 +2922,7 @@ Transform:
   m_GameObject: {fileID: 1872474073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.16, y: -1.68, z: 52.51837}
+  m_LocalPosition: {x: -1.16, y: -1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2971,7 +3012,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.6476021, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
@@ -2982,7 +3023,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 18.043629, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1926420846
 GameObject:
