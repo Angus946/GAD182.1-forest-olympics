@@ -7,6 +7,11 @@ TagManager:
   - lowScoreZone
   - mediumScoreZone
   - highScoreZone
+  - laneTwo
+  - laneOne
+  - laneZero
+  - enemy
+  - endpoint
   layers:
   - Default
   - TransparentFX
