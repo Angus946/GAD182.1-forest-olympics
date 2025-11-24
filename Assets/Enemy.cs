@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{// code in green is for later with UI
- // main main;
+{ 
+    public main main;
     Transform tr;
 
     void Start()
     {
         tr = GetComponent<Transform>();
-  //      main = GameObject.Find("scripts").GetComponent<main>();
+        main = GameObject.Find("Scripts").GetComponent<main>();
     }
 
 
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
-         //   main.GameOver = true;
+            main.GameOver = true;
         }
     }
 

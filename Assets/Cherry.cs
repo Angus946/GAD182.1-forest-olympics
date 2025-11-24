@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cherry : MonoBehaviour
-{// code in green is for later with UI
- // main main;
+{ 
+    main main;
     Transform tr;
 
 
     void Start()
     {
         tr = GetComponent<Transform>();
-     //   main = GameObject.Find("scripts").GetComponent<main>();
+        main = GameObject.Find("Scripts").GetComponent<main>();
      
     }
 
@@ -28,7 +28,7 @@ public class Cherry : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             Destroy(this.gameObject);
-          //  main.ScoreAdd();
+            main.ScoreAdd();
         }
     }
 }
