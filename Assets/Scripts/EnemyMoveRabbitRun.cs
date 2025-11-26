@@ -35,33 +35,33 @@ public class EnemyMoveRabbitRun : MonoBehaviour
 
         if (firstEnemy == 0)
         {
-            bearRB.velocity = Vector2.left;
+            bearRB.velocity = Vector2.left * enemySpeed;
             Debug.Log("Bear chosen");
         }
         else if (firstEnemy == 1)
         {
-            vultureRB.velocity = Vector2.left;
+            vultureRB.velocity = Vector2.left * enemySpeed;
             Debug.Log("Vulture Chosen");
         }
         else if (firstEnemy == 2)
         {
-            batRB.velocity = Vector2.left;
+            batRB.velocity = Vector2.left * enemySpeed;
             Debug.Log("Bat Chosen");
         }
 
         if (secondEnemy == 0)
         {
-            bearRB.velocity = Vector2.left;
+            bearRB.velocity = Vector2.left * enemySpeed;
             Debug.Log("Bear chosen");
         }
         else if (secondEnemy == 1)
         {
-            vultureRB.velocity = Vector2.left;
+            vultureRB.velocity = Vector2.left * enemySpeed;
             Debug.Log("Vulture Chosen");
         }
         else if (secondEnemy == 2)
         {
-            batRB.velocity = Vector2.left;
+            batRB.velocity = Vector2.left * enemySpeed;
             Debug.Log("Bat Chosen");
         }
     }

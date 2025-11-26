@@ -17,7 +17,6 @@ public class RabbitMovement : MonoBehaviour
     // int's to represent each lane
     //this is for moving between the lanes
     [SerializeField] private int lane = 1;
-    [SerializeField] private int targetLane = 1;
     [SerializeField] private Vector2 targetPositionUp;
     [SerializeField] private Vector2 targetPositionDown;
 
@@ -32,10 +31,15 @@ public class RabbitMovement : MonoBehaviour
     [SerializeField] private float rayTestLength = 2f;
     [SerializeField] private Vector2 belowLane;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private ScoreRabbitRun ScoreScript;
+    [SerializeField] public bool isPlaying;
+
+   // Start is called before the first frame update
+   void Start()
     {
-      rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        ScoreScript = FindObjectOfType<ScoreRabbitRun>();
+        isPlaying = true;
     }
 
     // Update is called once per frame
@@ -125,7 +129,10 @@ public class RabbitMovement : MonoBehaviour
         RaycastHit2D laneUp = Physics2D.Raycast(transform.position, Vector2.up);
         transform.position = targetPositionUp;
         rb.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y);
-        targetPositionUp = new Vector2(rb.transform.position.x, laneUp.collider.transform.position.y + 1.5f);
+        if (laneUp.collider == null)
+        {
+            targetPositionUp = new Vector2(rb.transform.position.x, rb.transform.position.y);
+        }
 
     }
     private void MoveLaneDown(InputAction.CallbackContext obj)
@@ -137,6 +144,14 @@ public class RabbitMovement : MonoBehaviour
         if (laneDown.collider == null)
         {
             targetPositionDown = new Vector2(rb.transform.position.x, rb.transform.position.y);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            isPlaying = false;
         }
     }
 }
