@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/RabbitRun.unity
+    guid: 7c559c4e8f1062948b1c69071667ed33
+  - enabled: 1
+    path: Assets/Scenes/FrogJump.unity
+    guid: 4c770a8edb7a9f14293f29fc8216ed22
+  - enabled: 1
+    path: Assets/Scenes/FrogJumpEnd.unity
+    guid: ba1727ed0e561fe45bdf0429321a26ef
+  - enabled: 1
+    path: Assets/Scenes/RabbitRunEnd.unity
+    guid: 14e52f268faeaef46b5ee6952deeadad
   m_configObjects: {}

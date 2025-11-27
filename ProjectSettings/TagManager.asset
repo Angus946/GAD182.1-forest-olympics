@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - lowScoreZone
+  - mediumScoreZone
+  - highScoreZone
+  - laneTwo
+  - laneOne
+  - laneZero
+  - enemy
+  - endpoint
   layers:
   - Default
   - TransparentFX
