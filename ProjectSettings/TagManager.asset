@@ -4,22 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - lowScoreZone
-  - mediumScoreZone
-  - highScoreZone
-  - laneTwo
-  - laneOne
-  - laneZero
-  - enemy
-  - endpoint
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - floor
+  - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
