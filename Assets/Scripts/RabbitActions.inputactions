@@ -1,0 +1,109 @@
+{
+    "version": 1,
+    "name": "RabbitActions",
+    "maps": [
+        {
+            "name": "RabbitMove",
+            "id": "9ee84423-54b3-47b1-851a-346dc8b5a522",
+            "actions": [
+                {
+                    "name": "RabbitMoveAction",
+                    "type": "PassThrough",
+                    "id": "4095eccf-b9b3-4259-bd65-17e3071d228a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RabbitLaneUp",
+                    "type": "Button",
+                    "id": "d5d8faf9-e217-418f-b688-f64137332421",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RabbitLaneDown",
+                    "type": "Button",
+                    "id": "c5e32330-7ea4-4df2-9fce-9a7c3a0e5401",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3617ab98-0c18-40ae-b5e9-ed0aa4e07b34",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "RabbitLaneUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7069c3b6-b9a3-4dbb-b642-9c6766ed97c4",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "RabbitLaneDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "14320432-401b-4b8f-9015-66f49975def9",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RabbitMoveAction",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "18c7eb94-6c44-4516-a79b-87416d6a4aa5",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "RabbitMoveAction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "fca61444-2cc8-49df-a38a-8418e4c04803",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "RabbitMoveAction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
