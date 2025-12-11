@@ -19,10 +19,22 @@ public class MenuScript : MonoBehaviour
     }
     public void LoadSceneName(string sceneName)
     {
-        int random = Random.Range(1, 7);
+        int random = Random.Range(1, 8);
         Debug.Log(random + "before Scene");
         SceneManager.LoadScene(random);
         Debug.Log(random + "afterscene");
+    }
+
+    public void loadGameSelect(string sceneName)
+    {
+        
+        SceneManager.LoadScene("GameSelect");
+        
+    }
+
+    public void Pigeon(string sceneName)
+    {
+        SceneManager.LoadScene(7);
     }
 
 }
